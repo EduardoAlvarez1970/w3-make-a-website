@@ -75,7 +75,13 @@ body {
   .main {
     display: flex; /*The flex container becomes flexible by setting the display property to flex*/
     /*ESTO HACE QUE CADA DIV EN VEZ DE ESTAR UNO DEBAJO DE OTRO (BLOCK) SE 'ACOMODEN' UNO SIGUIENTE DEL OTRO*/
-    flex-direction: column;
+    flex-direction: column; /*column los pone uno arriba de otro, mientras row (que es el default) es en linea*/
+    flex-wrap: wrap; /*The wrap value specifies that the flex items will wrap if necessary*/
+    /*esto significa que los items se van a ir acomodando hacia abajo y encolumnados si se van del layout*/
+    /*en cbio si fuese no-wrap VAN A SEGUIR ALINEADOS, solo que van a ir cambiando su tamaño para no salirse de 'la linea'*/
+
+
+
     /*ESTO QUE SIGUE ES SOBRE COMO SE COMOPRTA EL MAIN CONTAINER CON RESPECTO AL CONTAINER DEL LAYOUT QUE ES .row*/
     flex: 70%; /* Set the width of the main content */
     background-color: rgb(69, 229, 133); /*background color */
