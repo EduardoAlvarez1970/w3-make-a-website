@@ -53,9 +53,9 @@ body {
 
   /*We use CSS Flexbox to handle the layout:   */
   /* Ensure proper sizing */
-* {
+* { /*The CSS box-sizing property allows us to include the padding and border in an element's total width and height.*/
     box-sizing: border-box;
-  }
+  } /*JavaScript syntax: object.style.boxSizing="border-box"*/
   
   /* Column container */
   .row {
@@ -73,9 +73,23 @@ body {
   
   /* Main column */
   .main {
+    display: flex; /*The flex container becomes flexible by setting the display property to flex*/
+    /*ESTO HACE QUE CADA DIV EN VEZ DE ESTAR UNO DEBAJO DE OTRO (BLOCK) SE 'ACOMODEN' UNO SIGUIENTE DEL OTRO*/
+    flex-direction: column;
+    /*ESTO QUE SIGUE ES SOBRE COMO SE COMOPRTA EL MAIN CONTAINER CON RESPECTO AL CONTAINER DEL LAYOUT QUE ES .row*/
     flex: 70%; /* Set the width of the main content */
     background-color: rgb(69, 229, 133); /*background color */
     padding: 20px; /* Some padding */
+    text-align: center;
+  }
+   
+  /*AHORA CADA DIV QUE ESTAN DENTRO DEL CONTAINER .main*/
+  .main > div {
+    background-color: #eaff29;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
   }
 
 
